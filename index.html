@@ -14,16 +14,16 @@
 
             <div class="header">
                 <h2>Mortgage Calculator</h2>
-                <p>Clear All</p>
+                <p class="js-clear-btn">Clear All</p>
             </div>
 
             <form class="mortgage-form">
 
                 <div class="first-input">
                     <p>Mortgage Amount</p>
-                    <div class="amount-container">
+                    <div class="amount-container  js-amount-empty-input">
                         <span>€</span>
-                        <input type="text">
+                        <input class="js-amount-input" type="number">
 
                     </div>
                 </div>
@@ -32,16 +32,16 @@
 
                     <div class="left-input">
                         <p>Mortgage Term</p>
-                        <div class="term-input">
-                            <input type="text">
+                        <div class="term-input js-term-empty-input">
+                            <input class="js-term-input" type="number">
                             <span>years</span>
                         </div>
                     </div>
 
                     <div class="right-input">
                         <p>Interest Rate</p>
-                        <div class="rate-input">
-                            <input type="text">
+                        <div class="rate-input  js-rate-empty-input">
+                            <input class="js-rate-input" type="number">
                             <span>%</span>
                         </div>
                     </div>
@@ -49,12 +49,12 @@
 
                 <div class="mortgage-type">
                     <p>Mortgage Type</p>
-                    <div class="first-radio-box">
-                        <input type="radio" id="repayment" name="type" value="repayment">
+                    <div class="first-radio-box js-first-empty-input">
+                        <input type="radio" class="mortgage-radio" id="repayment" name="type" value="repayment">
                         <label for="repayment">Repayment</label>
                     </div>
-                    <div class="second-radio-box">
-                        <input type="radio" name="type" value="interest" id="interest">
+                    <div class="second-radio-box js-second-empty-input">
+                        <input type="radio" class="mortgage-radio" name="type" value="interest" id="interest">
                         <label for="interest">Interest Only</label>
                     </div>
 
@@ -67,7 +67,7 @@
             </form>
 
         </div>
-        <div class="right-container">
+        <div class="right-container js-result-container">
             <div class="content">
                 <img src="images/illustration-empty.svg" alt="illustration empty">
                 <h2> Results shown here</h2>
@@ -76,8 +76,9 @@
                 </p>
             </div>
         </div>
-    </div>
 
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
